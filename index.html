@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Elisa's Hangman Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Hangman in the Jungle</h1>
+        </div>
+    </div>
+
+    <!-- This is the main container where the game will take place -->
+    <div class="container" id="maingame">
+
+        <!-- When the game is won, display the word and the appropriate image here. -->
+        <div id="wordimage"></div>
+
+        <h3>Press any key to get started!</h3>
+
+        <!-- The win count will be housed here. -->
+        <div id="wins"></div>
+
+        <p>Current Word</p>
+
+        <!-- The dashes/word being guessed will be displayed here. -->
+        <div id="guesstheword"></div>
+
+        <!-- The number of guesses left will be displayed here. -->
+        <div id="guessesleft"></div>
+
+        <p>Letters Already Guessed:</p>
+        <!-- The list of letters guessed in the game will be displayed here. -->
+        <div id="lettersused"></div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
