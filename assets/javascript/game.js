@@ -7,20 +7,20 @@ window.onload = function() {
     
     var getrandomword = wordbank[Math.floor(Math.random() * wordbank.length)];
     console.log(getrandomword);
-
+    console.log(getrandomword.length);
 
 // take the length of the word and put that number of dashes into the div #guesstheword
 
-var dash = "";
 
-for (i=0; i <= getrandomword.length; i++) {
-    var newdash = "_"
-    var fulldash = dash + " " + newdash;
-    document.getElementById("guesstheword").innerHTML = fulldash;
+for (i=0; i < getrandomword.length; i++) {
+    // var dashes = document.createElement("div");
+    // document.getElementById("singledash").innerHTML = "_";
+    // document.getElementById("guesstheword").appendChild(dashes);
+
+  document.getElementById("guesstheword").innerHTML += "_" + " ";
 }
 }
 
-// var randomword = document.getElementById(guesstheword);
 
 // onkeyup take the key that is chosen, make it lowercase
 
