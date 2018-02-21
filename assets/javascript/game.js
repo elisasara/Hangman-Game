@@ -48,7 +48,6 @@ console.log(randomword);
 // }
 
 
-
 window.onload = function start() {
 
     document.getElementById("wins").innerHTML = wincount;
@@ -65,9 +64,7 @@ window.onload = function start() {
         document.getElementById("guesstheword").innerHTML = combine;
     }
 
-
-
-    function playgame() {
+    onkeyup = function playgame() {
         // onkeyup take the key that is chosen, make it lowercase
         var playerguess = event.key.toLowerCase();
         console.log(playerguess);
@@ -91,24 +88,42 @@ window.onload = function start() {
             }
         }
     // lower the number of guesses left by one div #guessesleft
-    document.getElementById("guessesleft").innerHTML = guessesremain - 1;
+    document.getElementById("guessesleft").innerHTML = guessesremain -1;
 
+        
 
         if (chosenword[i] !== "_") {
                 // when the word is complete add one to the win total
             document.getElementById("wins").innerHTML = wincount++;
+
+            // display a photo of the animal and play a sound if word guessed
             // photo.style.display = "block";
         }
 
+            // if guesses left equals zero let the user know they have lost and start the reset function
+
+
+        // set a notification if the letter has already been guessed
+
+        // set rule for only letters in alphabet to be accepted
+
     }
+}
+
+    // reset game for new word
+function reset() {
+    // choose a new random word from the array
+var randomword = wordbank[Math.floor(Math.random() * wordbank.length)];
+
+return start ();
+
+
 }
 
 
 
 
-// display a photo of the animal and play a sound
 
-// reset game 
 
-// set a notification if the letter has already been guessed
+
 
