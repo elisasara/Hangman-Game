@@ -18,6 +18,7 @@ console.log(randomword);
 function reset() {
     // clear the chosenword array
     chosenword.length = 0;
+    console.log(chosenword);
 
     // clear letters already chosen from array
     lettersguessed.length = 0;
@@ -38,16 +39,20 @@ function reset() {
         document.getElementById("guesstheword").innerHTML = combine;
     }
 
+    // remove photo from previous game
+    document.getElementById("wordimage").innerHTML = "";
+
+
 }
 
-// the main function
+// // the main function
 function start() {
 
-    //display the current wincount and number of guesses remaining
+//     //display the current wincount and number of guesses remaining
     document.getElementById("wins").innerHTML = wincount;
     document.getElementById("guessesleft").innerHTML = guessesremain;
 
-    // take the length of the randomword and put that number of dashes into a new array and add that to the div #guesstheword
+//     // take the length of the randomword and put that number of dashes into a new array and add that to the div #guesstheword
 
     for (i = 0; i < randomword.length; i++) {
         chosenword[i] = "_";
@@ -89,6 +94,7 @@ document.onkeyup = function playgame() {
         }
     }
 
+
     // convert the chosenword array into a string to determine if the player wins.
     var chosenwordstring = chosenword.toString();
 
@@ -119,8 +125,8 @@ document.onkeyup = function playgame() {
             document.getElementById("wordimage").innerHTML = "<img src='assets/images/anaconda.jpg'>";
         }
 
-        //reset guesses remain to 12
         guessesremain = 12;
+
     }
 
     // if the player runs out of guesses
@@ -129,8 +135,8 @@ document.onkeyup = function playgame() {
         //show an alert directing them to hit the "new word" button
         alert("Sorry, you lost! Click the New Word button to try again.");
 
-        //reset guessesremain to 12
         guessesremain = 12;
-    }
-}
 
+    }
+
+}

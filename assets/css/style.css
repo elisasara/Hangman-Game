@@ -1,7 +1,30 @@
+.jumbotron {
+    text-align: center;
+    background-color: green;
+    color: white;
+}
 
+
+#wordimage {
+    max-width: 300px;
+    margin: auto;
+}
 
 img {
     max-width: 300px;
     height: auto;
+    margin: auto;
+    padding-bottom: 10px;
 }
 
+
+#maingame {
+    max-width: 300px;
+    height: auto;
+    padding: 25px;
+    border-style: dashed;
+    border-width: 10px;
+    border-color: green;
+    text-align: center;
+    margin-bottom: 20px;
+}
