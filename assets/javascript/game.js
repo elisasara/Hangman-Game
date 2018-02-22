@@ -14,49 +14,21 @@ var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
 var randomword = wordbank[Math.floor(Math.random() * wordbank.length)];
 console.log(randomword);
 
-// var photo = document.getElementById("wordimage")
-// var image = document.createElement("img");
-
-// // tells which image to put in the div #wordimage based on the randomword chosen
-// if (randomword === "tiger") {
-//     image.src = "assets/images/tiger.jpg";
-//     photo.appendChild(image);
-// }
-
-// if (randomword === "monkey") {
-//     image.src = "assets/images/monkey.jpg";
-//     photo.appendChild(image);
-// }
-
-// if (randomword === "leopard") {
-//     image.src = "assets/images/leopard.jpg";
-//     photo.appendChild(image);
-// }
-
-// if (randomword === "gorilla") {
-//     image.src = "assets/images/gorilla.jpg";
-//     photo.appendChild(image);
-// }
-
-// if (randomword === "anacoda") {
-//     image.src = "assets/images/anaconda.jpg";
-//     photo.appendChild(image);
-// }
-
-// if (randomword === "elephant") {
-//     image.src = "assets/images/elephant.jpg";
-//     photo.appendChild(image);
-// }
 
 function reset() {
     // clears the chosen word array
-    var chosenword = [];
+    chosenword.length = 0;
+
+    // clears letters already chosen from array
+    lettersguessed.length = 0;
+    document.getElementById("lettersused").innerHTML = lettersguessed
 
     // reset the number of guesses
     var guessesremain = 12;
     document.getElementById("guessesleft").innerHTML = guessesremain;
     // choose a new random word from the array
 var randomword = wordbank[Math.floor(Math.random() * wordbank.length)];
+console.log(randomword);
 
 for (i = 0; i < randomword.length; i++) {
     chosenword[i] = "_";
@@ -67,8 +39,7 @@ for (i = 0; i < randomword.length; i++) {
 }
 
 
-window.onload = function start() {
-
+function start() {
     document.getElementById("wins").innerHTML = wincount;
     document.getElementById("guessesleft").innerHTML = guessesremain;
 
@@ -79,6 +50,7 @@ window.onload = function start() {
         var combine = chosenword.join(" ");
         document.getElementById("guesstheword").innerHTML = combine;
     }
+}
 
     document.onkeyup = function playgame() {
         // onkeyup take the key that is chosen, make it lowercase
@@ -108,12 +80,11 @@ window.onload = function start() {
             }
             console.log(combine);
         }
-    
-
-              // win!
+                      // win!
   var chosenwordstring = chosenword.toString();
   if (chosenword.indexOf("_") === -1) {
-    document.getElementById("wins").innerHTML = wincount++;
+      wincount++;
+    document.getElementById("wins").innerHTML = wincount;
   }
 
 // loss!
@@ -121,15 +92,13 @@ if (guessesremain === 0) {
     alert("Sorry, you lost! Click the New Word button to try again.");
 }
     }
-
-
-    // lower the number of guesses left by one div #guessesleft
-
-
-        // set a notification if the letter has already been guessed
-
-        // set rule for only letters in alphabet to be accepted
-    }
-
-
     
+
+
+
+
+
+
+// set rule for no more guesses after game is won or lost until button clicked
+// set rule for only letters in alphabet array to be accepted
+// set rule so that a letter cannot be counted as a guess twice
