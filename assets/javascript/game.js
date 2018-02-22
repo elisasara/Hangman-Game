@@ -42,8 +42,6 @@ function reset() {
     // remove photo from previous game
     document.getElementById("wordimage").innerHTML = "";
 
-    start();
-
 }
 
 // // the main function
@@ -126,8 +124,6 @@ document.onkeyup = function playgame() {
             document.getElementById("wordimage").innerHTML = "<img src='assets/images/anaconda.jpg'>";
         }
 
-        guessesremain = 12;
-
     }
 
     // if the player runs out of guesses
@@ -136,7 +132,6 @@ document.onkeyup = function playgame() {
         //show an alert directing them to hit the "new word" button
         alert("Sorry, you lost! Click the New Word button to try again.");
 
-        guessesremain = 12;
 
     }
 

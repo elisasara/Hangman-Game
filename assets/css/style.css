@@ -2,6 +2,15 @@
     text-align: center;
     background-color: green;
     color: white;
+    font-family: 'Average Sans', sans-serif;
+}
+
+body {
+    background: #e0edc7;
+}
+
+h3 {
+    font-family: 'Average Sans', sans-serif;
 }
 
 
@@ -27,4 +36,15 @@ img {
     border-color: green;
     text-align: center;
     margin-bottom: 20px;
+}
+
+#resetbutton {
+    background-color: #28f157;
+    border-width: 3px;
+    border-color: green;
+}
+
+#resetbutton:hover {
+    background-color: green;
+    color: white;
 }
