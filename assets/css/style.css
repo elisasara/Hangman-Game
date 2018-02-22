@@ -1,12 +1,5 @@
-/* body {
-    background-color: green;
+img {
+    max-width: 300px;
+    height: auto;
 }
 
-.jumbotron {
-
-}
- */
-
-#wordimage {
-    display: none;
-}
