@@ -25,11 +25,11 @@ function reset() {
     document.getElementById("lettersused").innerHTML = lettersguessed
 
     // reset the number of guesses
-    var guessesremain = 12;
+    guessesremain = 12;
     document.getElementById("guessesleft").innerHTML = guessesremain;
 
-    // choose a new random word from the array
-    var randomword = wordbank[Math.floor(Math.random() * wordbank.length)];
+    // // choose a new random word from the array
+    randomword = wordbank[Math.floor(Math.random() * wordbank.length)];
     console.log(randomword);
 
     // display the new word as dashes in the guesstheword div
@@ -42,17 +42,18 @@ function reset() {
     // remove photo from previous game
     document.getElementById("wordimage").innerHTML = "";
 
+    start();
 
 }
 
 // // the main function
 function start() {
 
-//     //display the current wincount and number of guesses remaining
+    //     //display the current wincount and number of guesses remaining
     document.getElementById("wins").innerHTML = wincount;
     document.getElementById("guessesleft").innerHTML = guessesremain;
 
-//     // take the length of the randomword and put that number of dashes into a new array and add that to the div #guesstheword
+    //     // take the length of the randomword and put that number of dashes into a new array and add that to the div #guesstheword
 
     for (i = 0; i < randomword.length; i++) {
         chosenword[i] = "_";
