@@ -127,7 +127,7 @@ document.onkeyup = function playgame() {
     }
 
     // if the player runs out of guesses
-    if (guessesremain === 0) {
+    if (guessesremain === 0 && chosenword.indexOf("_") !== -1) {
 
         //show an alert directing them to hit the "new word" button
         alert("Sorry, you lost! Click the New Word button to try again.");
